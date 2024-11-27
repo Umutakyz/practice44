@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Registration Form</h2>
+        <form name="registrationForm" onsubmit="return validateForm()">
+            <label for="username">UserName:</label>
+            <input type="text" id="username" name="username" required>
+            <small id="username-error" class="error-message"></small>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <small id="password-error" class="error-message"></small>
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <small id="confirm-password-error" class="error-message"></small>
+
+            <label for="dob">Day of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+            <small id="dob-error" class="error-message"></small>
+
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="Male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="Other">
+            <label for="other">Other</label>
+
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+                <option value="">--Select--</option>
+                <option value="US">United States</option>
+                <option value="Ukraine">Ukraine</option>
+                <option value="UK">United Kingdom</option>
+                <option value="Turkey">Turkey</option>
+            </select>
+            <small id="country-error" class="error-message"></small>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+            <small>Format: 10 digits (e.g., 1234567890)</small>
+
+            <label for="hobbies">Hobbies:</label>
+            <textarea id="hobbies" name="hobbies" rows="4" required></textarea>
+            <small id="hobbies-error" class="error-message"></small>
+
+            <label for="newsletter">Receive Newsletter:</label>
+            <input type="checkbox" id="newsletter" name="newsletter">
+            <small id="newsletter-error" class="error-message"></small>
+
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
